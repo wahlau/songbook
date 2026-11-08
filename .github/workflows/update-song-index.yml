@@ -1,0 +1,40 @@
+name: Update song index
+
+# Whenever songs are added, edited or removed, rebuild songs/index.json
+# so the website lists them straight away.
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'songs/**'
+      - 'js/songs.js'
+      - 'scripts/build-index.js'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build songs/index.json
+        run: node scripts/build-index.js
+
+      - name: Commit if it changed
+        run: |
+          if [ -z "$(git status --porcelain songs/index.json)" ]; then
+            echo "Index already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add songs/index.json
+          git commit -m "Update song index"
+          git push
