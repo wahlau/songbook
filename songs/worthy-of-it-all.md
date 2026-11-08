@@ -1,41 +1,30 @@
 ---
 title: Worthy Of It All
-key: D
+key: C
 source: https://pnwarchive.com/worship-song/worthy-of-it-all
 ---
-# Intro
-
-[D] [E/D]
 
 # Verse
 
-[D]All the saints and [E/D]angels
-[D]Bow before Your th[E/D]rone
-[D]All the elders [E/D]cast their crowns
-Before the L[D]amb of G[E]od and s[A]ing
+[F]All the saints and [G]angels
+They [F]bow before Your [G]throne
+[F]All the elders [G]cast their crowns
+Before the L[F]amb of G[G]od and s[C]ing
 
 # Chorus
 
-You are worthy of it a[A]ll
-You are worthy of it a[E]ll
-For from You are all th[D]ings
-And to You are all t[E]hings
-You deserve the g[A]lory
-
-# Interlude
-
-A     C♯m7     F♯m7    D
-[A/E] [E] [Bm7] [D]
+You are worthy of it a[C]ll
+You are worthy of it a[G]ll
+For from You are all th[F]ings
+And to You are all t[G]hings
+You deserve the g[C]lory
 
 # Bridge
-
-[A]Day and night, night and day
-C♯m7
-Let incense arise
-F♯m7
-Day and night, night and day
-Let i[D]ncense arise
-[A/E]Day and night, night and day
-Let i[E]ncense arise
-[Bm7]Day and night, night and day
-Let [D]incense arise
+[C]Day and night, night and day
+Let [Em]incense arise
+[Am]Day and night, night and day
+Let i[F]ncense arise
+[C/G]Day and night, night and day
+Let i[G]ncense arise
+[Dm7]Day and night, night and day
+Let [F]incense arise
