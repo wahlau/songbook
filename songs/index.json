@@ -1,5 +1,5 @@
 {
-  "count": 22,
+  "count": 24,
   "songs": [
     {
       "slug": "alabaster-jar",
@@ -242,6 +242,18 @@
       "sha": "fd000a24bc22b849274616fa64efe839ca0a4bba"
     },
     {
+      "slug": "pass-it-on",
+      "title": "Pass It On",
+      "author": "Kurt Kaiser",
+      "key": "C",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "X",
+      "words": "X Pass It On Chords by Misc Praise Songs Difficulty: beginner Tuning: E A D G B E Chords It only takes a spark to get a fire going And soon all those around can warm up in its glowing That's how it is with God's love Once you've experienced it, you spread His love to everyone, You want to pass it on What a wondrous time is spring, when all the trees are budding The birds begin to sing, the flowers start their blooming That's how it is with God's love Once you've experienced it, you want to sing It's fresh like spring, you want to pass it on I wish for you my friend, this happiness that I've found You can depend on Him, it matters not where you're bound I'll shout it from the mountain top I want the world to know, the Lord of love has come to me, I want to pass it on",
+      "sha": "1622ad0087903f18e92ef8bbf2ea231715f2bbf2"
+    },
+    {
       "slug": "search-me-o-god",
       "title": "Search Me O God",
       "author": "J. Edwin Orr",
@@ -252,6 +264,18 @@
       "firstLine": "Search me, O God, and know my heart today;",
       "words": "Search me, O God, and know my heart today; Try me, O Saviour, Know my thoughts, I pray. See if there be some wicked way in me; Cleanse me from every sin and set me free. I praise Thee, Lord, for cleansing me from sin; Fulfill Thy Word, and make me pure within. Fill me with fire where once I burned with shame; Grant my desire to magnify Thy Name. Lord, take my life, and make it wholly Thine; Fill my poor heart with Thy great love divine. Take all my will, my passion, self and pride; I now surrender, Lord In me abide. O Holy Ghost, revival comes from Thee; Send a revival, start the work in me. Thy Word declares Thou wilt supply our need; For blessings now, O Lord, I humbly plead.",
       "sha": "52813847beef638178549c849142917a32d59e84"
+    },
+    {
+      "slug": "we-are-one-in-the-spirit",
+      "title": "We Are One In The Spirit",
+      "author": "",
+      "key": "Em",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "We are one in the Spirit, we are one in the Lord.",
+      "words": "We are one in the Spirit, we are one in the Lord. We are one in the Spirit, we are one in the Lord. And we pray that all unity may one day be restored. And they'll know we are Christians by our love, by our love, Yes they'll know we are Christians by our love. We will walk with each other, we will walk hand in hand. We will walk with each other, we will walk hand in hand. And together we'll spread the news that God is in our land. And they'll know we are Christians by our love, by our love, Yes they'll know we are Christians by our love. We will work with each other, we will work side by side. We will work with each other, we will work side by side. And we'll guard each man's dignity and save each man's pride. And they'll know we are Christians by our love, by our love, Yes they'll know we are Christians by our love. All praise to the Father, from whom all things come, And all praise to Christ Jesus, God's only son, and all praise to the Spirit, who makes us one. And they'll know we are Christians by our love, by our love, Yes they'll know we are Christians by our love.",
+      "sha": "6a64097e7406ec1443464972d5cf268ec7241f72"
     },
     {
       "slug": "worthy-of-it-all",
