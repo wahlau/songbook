@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Song Converter</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+  <script>try{var t=JSON.parse(localStorage.getItem('songbook.theme'));if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="stylesheet" href="css/style.css?v=20261108c">
+  <style>
+    .conv { display: grid; gap: 20px; padding-top: 20px; padding-bottom: 48px; }
+    @media (min-width: 960px) { .conv { grid-template-columns: 1fr 1fr; } .conv .full { grid-column: 1 / -1; } }
+    .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0 12px; }
+    .meta-grid .field { margin: 8px 0 0; }
+    textarea {
+      width: 100%; min-height: 360px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px;
+      background: var(--surface); color: var(--ink); font: 14px/1.5 ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      resize: vertical; white-space: pre; overflow-wrap: normal; overflow-x: auto; tab-size: 4;
+    }
+    textarea:focus { outline: 2px solid var(--focus); border-color: transparent; }
+    .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; min-width: 0; }
+    .panel h2 { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+    .hint { color: var(--muted); font-size: .88rem; margin: 0 0 10px; }
+    .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; align-items: center; }
+    .fname { font: 600 .85rem ui-monospace, Menlo, Consolas, monospace; color: var(--muted); }
+    .pv { --lyric-size: 1.05rem; max-height: 520px; overflow: auto; }
+    .back { font-weight: 600; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header class="site-head">
+    <div class="wrap">
+      <div class="brand">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="4" width="26" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M11 4v32" stroke="currentColor" stroke-width="2.4"/><path d="M21 12v11.5a3 3 0 1 1-2-2.8V12h6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <h1>Song converter</h1>
+          <p class="sub">Paste a chord sheet (chords above the words) and get a song file.</p>
+        </div>
+      </div>
+      <a class="back" href="index.html">← Song picker</a>
+    </div>
+  </header>
+
+  <main class="wrap conv">
+    <section class="panel full">
+      <h2>Song details</h2>
+      <div class="meta-grid">
+        <label class="field"><span>Title *</span><input id="mTitle" autocomplete="off"></label>
+        <label class="field"><span>Author / artist</span><input id="mAuthor" autocomplete="off"></label>
+        <label class="field"><span>Key</span><input id="mKey" placeholder="auto from first chord" autocomplete="off"></label>
+        <label class="field"><span>Tempo (bpm)</span><input id="mTempo" inputmode="numeric" autocomplete="off"></label>
+        <label class="field"><span>Tags (comma separated)</span><input id="mTags" placeholder="praise, opening" autocomplete="off"></label>
+        <label class="field"><span>Copyright / licence line</span><input id="mCopy" autocomplete="off"></label>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>1 · Paste the chord sheet</h2>
+      <p class="hint">Chords on their own line, above the words they belong to. Section names such as <b>Intro</b>, <b>Verse</b>, <b>Bait</b>, <b>Chorus</b>, <b>Reff</b>, <b>Bridge</b> or <b>Interlude</b> become headings.</p>
+      <textarea id="src" spellcheck="false" placeholder="Verse 1:
+G          C        G
+Words of the first line here
+Em           D
+Words of the second line here
+
+Chorus:
+C      D       G
+Chorus words go here"></textarea>
+      <div class="row">
+        <button id="convertBtn" class="btn primary small" type="button">Convert →</button>
+        <button id="clearBtn" class="btn ghost small" type="button">Clear</button>
+        <span id="convStatus" class="hint" style="margin:0"></span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>2 · Your song file <span class="fname" id="fname"></span></h2>
+      <p class="hint">Check it, fix anything that looks off, then download it into the <code>songs/</code> folder.</p>
+      <textarea id="out" spellcheck="false"></textarea>
+      <div class="row">
+        <span class="transpose" role="group" aria-label="Transpose the song file" style="margin:0">
+          <span>Key <b id="cKey">—</b> <small id="cSteps"></small></span>
+          <button type="button" data-ct="-1" aria-label="Transpose down a semitone">−</button>
+          <button type="button" data-ct="1" aria-label="Transpose up a semitone">+</button>
+          <button type="button" data-ct="0" aria-label="Back to original key" title="Original key">↺</button>
+        </span>
+      </div>
+      <div class="row">
+        <button id="dl" class="btn primary small" type="button">Download .md</button>
+        <button id="copy" class="btn ghost small" type="button">Copy text</button>
+      </div>
+    </section>
+
+    <section class="panel full">
+      <h2>Preview</h2>
+      <div id="pv" class="pv lyrics"><p class="status">Paste a chord sheet to see a preview.</p></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/songs.js?v=20261108c"></script>
+  <script src="js/common.js?v=20261108c"></script>
+  <script>
+  (function () {
+    'use strict';
+    const S = window.SongLib, C = window.SBCommon;
+    const $ = s => document.querySelector(s);
+    if (!S || typeof S.transposeText !== 'function' || !C) {
+      document.querySelector('#pv').innerHTML = '<p class="status"><b>The converter could not start because your browser loaded an old copy of the site files.</b><br>Do a hard refresh: <b>Ctrl + Shift + R</b> (Windows) or <b>Cmd + Shift + R</b> (Mac). On a phone, close the tab and open the page again.</p>';
+      return;
+    }
+
+    const CHORD = /^\(?[A-G][#b]?(?:maj|min|m|M|dim|aug|sus|add|°|ø|\+|-)?[0-9]*(?:(?:sus|add|maj|b|#)[0-9]+)*(?:\/[A-G][#b]?)?\)?$/;
+    const FILLER = /^(\||\|\||\/|-|–|\.{1,3}|x\d+|\d+x|\(x?\d+x?\)|:\|\|?|\|\|?:)$/i;
+    const NC = /^\(?N\.?C\.?\)?$/i;
+    const SECTION = /^\s*\[?\s*((?:pre[- ]?)?(?:intro|int|verse|bait|chorus|reff?|refrain|bridge|jembatan|interlude|instrumental|ins|music|musik|outro|ending|coda|tag|pre[- ]?chorus|pre[- ]?reff?|solo|vamp|turnaround)\b(?:\s*\d+)?)\s*\]?\s*([:.\-–]?)\s*(.*)$/i;
+    const isChordTok = t => CHORD.test(t) || NC.test(t);
+
+    function matchSection(line) {
+      const m = line.match(SECTION);
+      if (!m) return null;
+      const rest = m[3].trim();
+      // A heading is the name alone, or "Name:" followed by anything, or the name followed by chords only.
+      if (!rest || m[2] || /\]\s*/.test(line.slice(0, line.indexOf(rest) || undefined)) || isChordLine(rest)) {
+        return { name: m[1], rest };
+      }
+      return null;
+    }
+
+    function isChordLine(line) {
+      const toks = line.trim().split(/\s+/).filter(Boolean);
+      if (!toks.length) return false;
+      let chords = 0;
+      for (const t of toks) {
+        if (isChordTok(t)) chords++;
+        else if (!FILLER.test(t)) return false;
+      }
+      return chords > 0;
+    }
+
+    function chordPositions(line) {
+      const out = [];
+      const re = /\S+/g;
+      let m;
+      while ((m = re.exec(line))) {
+        const tok = m[0].replace(/^\(|\)$/g, '');
+        if (isChordTok(m[0])) out.push({ col: m.index, chord: tok });
+      }
+      return out;
+    }
+
+    function mergeChords(chordLine, lyric) {
+      const pos = chordPositions(chordLine);
+      let text = lyric;
+      const maxCol = Math.max(...pos.map(p => p.col));
+      if (text.length < maxCol) text = text.padEnd(maxCol, ' ');
+      for (let i = pos.length - 1; i >= 0; i--) {
+        const p = pos[i];
+        text = text.slice(0, p.col) + `[${p.chord}]` + text.slice(p.col);
+      }
+      return text.replace(/\s+$/, '');
+    }
+
+    function chordsOnly(line) {
+      return line.trim().split(/\s+/).map(t => isChordTok(t) ? `[${t.replace(/^\(|\)$/g, '')}]` : (/x\d|\dx/i.test(t) ? `(${t.replace(/[()]/g, '')})` : t)).join(' ');
+    }
+
+    function titleCase(s) {
+      return s.replace(/\s+/g, ' ').trim().replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    function convertBody(src) {
+      const lines = src.replace(/\r\n?/g, '\n').replace(/\t/g, '    ').split('\n').map(l => l.replace(/\s+$/, ''));
+      const out = [];
+      let firstChord = '';
+      const heading = name => {
+        while (out.length && !out[out.length - 1].trim()) out.pop();
+        if (out.length) out.push('');
+        out.push('# ' + titleCase(name));
+      };
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        if (!line.trim()) { if (out.length && out[out.length - 1] !== '') out.push(''); continue; }
+
+        const sec = isChordLine(line) ? null : matchSection(line);
+        if (sec) {
+          heading(/^int$/i.test(sec.name) ? 'Intro' : /^ins$/i.test(sec.name) ? 'Instrumental' : sec.name);
+          const rest = sec.rest;
+          if (rest) {
+            if (isChordLine(rest)) {
+              out.push(chordsOnly(rest));
+              if (!firstChord) firstChord = chordPositions(rest)[0].chord;
+            } else {
+              out.push(rest);
+            }
+          }
+          continue;
+        }
+
+        if (isChordLine(line)) {
+          if (!firstChord) firstChord = chordPositions(line)[0].chord;
+          const next = lines[i + 1];
+          if (next !== undefined && next.trim() && !isChordLine(next) && !matchSection(next)) {
+            out.push(mergeChords(line, next));
+            i++;
+          } else {
+            out.push(chordsOnly(line));
+          }
+          continue;
+        }
+        out.push(line.trim() ? line.replace(/^\s+/, '') : '');
+      }
+      while (out.length && !out[out.length - 1].trim()) out.pop();
+      return { body: out.join('\n'), firstChord };
+    }
+
+    function slugify(s) {
+      return (s || 'new-song').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'new-song';
+    }
+
+    const fields = ['mTitle', 'mAuthor', 'mKey', 'mTempo', 'mTags', 'mCopy'].map(id => $('#' + id));
+    let manualEdit = false;
+    let convSteps = 0;
+
+    function showKey() {
+      const m = $('#out').value.match(/^key:\s*(.+)$/m);
+      $('#cKey').textContent = m ? m[1].trim() : '—';
+      $('#cSteps').textContent = convSteps ? `(${convSteps > 0 ? '+' : ''}${convSteps} from original)` : '';
+    }
+
+    function showError(err) {
+      console.error(err);
+      $('#pv').innerHTML = `<p class="status"><b>Something went wrong while converting.</b><br>${S && S.esc ? S.esc(err.message || String(err)) : String(err)}<br>
+        Try a hard refresh (Ctrl + Shift + R, or Cmd + Shift + R on a Mac). If it keeps happening, the pasted text may contain something unusual — try converting one section at a time.</p>`;
+      $('#convStatus').textContent = 'Conversion failed — see the preview box.';
+    }
+
+    function build() {
+      try { buildInner(); } catch (err) { showError(err); }
+    }
+
+    function buildInner() {
+      const { body, firstChord } = convertBody($('#src').value);
+      const [title, author, key, tempo, tags, copy] = fields.map(f => f.value.trim());
+      const autoKey = key || (firstChord ? firstChord.replace(/\/.*$/, '').replace(/(maj|sus|add|dim|aug)?\d*$/, '') : '');
+      const fm = ['---', `title: ${title || 'Untitled song'}`];
+      if (author) fm.push(`author: ${author}`);
+      if (autoKey) fm.push(`key: ${autoKey}`);
+      if (tempo) fm.push(`tempo: ${tempo}`);
+      if (tags) fm.push(`tags: ${tags}`);
+      if (copy) fm.push(`copyright: ${copy}`);
+      fm.push('---');
+      $('#out').value = S.transposeText(fm.join('\n') + '\n' + body + '\n', convSteps);
+      manualEdit = false;
+      $('#fname').textContent = slugify(title) + '.md';
+      showKey();
+      preview();
+      const n = (body.match(/\[[^\]]+\]/g) || []).length;
+      $('#convStatus').textContent = $('#src').value.trim() ? `Converted — ${n} chord${n === 1 ? '' : 's'} placed.` : '';
+    }
+
+    function preview() {
+      const text = $('#out').value;
+      if (!$('#src').value.trim() && !manualEdit) {
+        $('#pv').innerHTML = '<p class="status">Paste a chord sheet to see a preview.</p>';
+        return;
+      }
+      const song = S.parseSong(text, 'preview');
+      $('#pv').innerHTML = `<h2 style="margin:0 0 4px">${S.esc(song.title)}</h2>
+        <p class="song-meta" style="margin:0 0 18px">${[song.key && 'Key ' + song.key, song.author].filter(Boolean).map(S.esc).join(' · ')}</p>` +
+        S.renderLyrics(song, { chords: true });
+    }
+
+    $('#src').addEventListener('input', build);
+    $('#src').addEventListener('paste', () => setTimeout(build, 0));
+    $('#convertBtn').addEventListener('click', build);
+    $('#clearBtn').addEventListener('click', () => { $('#src').value = ''; convSteps = 0; build(); $('#src').focus(); });
+    fields.forEach(f => f.addEventListener('input', build));
+    $('#out').addEventListener('input', () => { manualEdit = true; try { showKey(); preview(); } catch (err) { showError(err); } });
+
+    document.querySelector('.conv').addEventListener('click', e => {
+      const b = e.target.closest('[data-ct]');
+      if (!b) return;
+      const d = +b.dataset.ct;
+      const next = d === 0 ? 0 : S.normSteps(convSteps + d);
+      const delta = next - convSteps;
+      if (!delta) return;
+      convSteps = next;
+      if (manualEdit) {
+        $('#out').value = S.transposeText($('#out').value, delta);
+        showKey();
+        preview();
+      } else {
+        build();
+      }
+    });
+
+    $('#dl').addEventListener('click', () => {
+      const blob = new Blob([$('#out').value], { type: 'text/markdown;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = $('#fname').textContent || 'new-song.md';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+    });
+    $('#copy').addEventListener('click', async () => {
+      C.toast(await C.copyText($('#out').value) ? 'Copied' : 'Could not copy');
+    });
+
+    const p = new URLSearchParams(location.search);
+    if (p.get('title')) fields[0].value = p.get('title');
+    if (p.get('author')) fields[1].value = p.get('author');
+    build();
+  })();
+  </script>
+</body>
+</html>

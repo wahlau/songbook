@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Songbook Builder</title>
+  <meta name="description" content="Pick songs, set the order and share a one-off songbook link.">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+  <script>try{var t=JSON.parse(localStorage.getItem('songbook.theme'));if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="stylesheet" href="css/style.css?v=20261108c">
+  <script src="config.js?v=20261108c"></script>
+</head>
+<body class="builder">
+  <header class="site-head">
+    <div class="wrap">
+      <div class="brand">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="4" width="26" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M11 4v32" stroke="currentColor" stroke-width="2.4"/><path d="M21 12v11.5a3 3 0 1 1-2-2.8V12h6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <h1 id="siteTitle">Songbook</h1>
+          <p class="sub">Pick songs, put them in order, share one link.</p>
+        </div>
+      </div>
+      <button id="themeBtn" class="icon-btn" type="button" aria-label="Switch light or dark theme" title="Light / dark">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="wrap builder-grid">
+    <section class="library" aria-labelledby="libHead">
+      <div class="lib-tools">
+        <h2 id="libHead">Song library <span id="libCount" class="count"></span></h2>
+        <input type="search" id="search" placeholder="Search by title, a line of lyrics, author or tag" autocomplete="off" aria-label="Search songs">
+        <div id="tags" class="chips" role="group" aria-label="Filter by tag"></div>
+      </div>
+      <p id="libStatus" class="status" role="status">Loading songs…</p>
+      <ul id="songList" class="song-list"></ul>
+      <p class="source-note"><span id="sourceNote"></span> <a href="convert.html">Convert a chord sheet into a song file →</a></p>
+    </section>
+
+    <div id="scrim" class="scrim" hidden></div>
+    <aside class="set-panel" id="setPanel" aria-labelledby="setHead">
+      <div class="set-inner">
+        <div class="set-head">
+          <h2 id="setHead">Your songbook <span id="setCount" class="count">0</span></h2>
+          <button id="closeSet" class="icon-btn only-mobile" type="button" aria-label="Close">✕</button>
+        </div>
+        <label class="field">
+          <span>Title</span>
+          <input id="setTitle" maxlength="80" autocomplete="off">
+        </label>
+        <ol id="setList" class="set-list"></ol>
+        <p id="setEmpty" class="empty">Nothing here yet. Tap <b>Add</b> next to a song.</p>
+        <div class="set-actions">
+          <button id="clearSet" class="btn ghost" type="button">Clear</button>
+          <button id="makeLink" class="btn primary" type="button" disabled>Create songbook link</button>
+        </div>
+        <div id="result" class="result" hidden>
+          <p class="result-label">Open this link on any phone or tablet:</p>
+          <div class="link-row">
+            <input id="linkOut" readonly aria-label="Songbook link">
+          </div>
+          <div class="result-actions">
+            <button id="copyLink" class="btn primary small" type="button">Copy link</button>
+            <button id="shareLink" class="btn ghost small" type="button" hidden>Share…</button>
+            <a id="openLink" class="btn ghost small" target="_blank" rel="noopener">Open songbook</a>
+          </div>
+          <div id="qr" class="qr" aria-label="QR code for the songbook link"></div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <button id="setFab" class="set-fab only-mobile" type="button">
+    Your songbook <span id="fabCount" class="fab-count">0</span>
+  </button>
+
+  <dialog id="preview" class="preview" aria-labelledby="pvTitle">
+    <div class="pv-head">
+      <div>
+        <h2 id="pvTitle"></h2>
+        <p id="pvMeta" class="song-meta"></p>
+      </div>
+      <button class="icon-btn" type="button" data-close aria-label="Close preview">✕</button>
+    </div>
+    <div id="pvBody" class="pv-body lyrics"></div>
+    <div class="pv-foot">
+      <button id="pvAdd" class="btn primary" type="button">Add to songbook</button>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script src="js/songs.js?v=20261108c"></script>
+  <script src="js/common.js?v=20261108c"></script>
+  <script src="js/builder.js?v=20261108c"></script>
+</body>
+</html>
