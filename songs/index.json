@@ -1,6 +1,18 @@
 {
-  "count": 5,
+  "count": 7,
   "songs": [
+    {
+      "slug": "as-the-deer",
+      "title": "As the Deer",
+      "author": "Martin J. Nystrom",
+      "key": "C",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "As the deer panteth for the water",
+      "words": "As the deer panteth for the water So my soul longeth after Thee You alone are my heart's desire And I long to worship Thee. You alone are my strength my shield To You alone may my spirit yield You alone are my heart's desire And I long to worship Thee I love you more than gold or silver Only You can satisfy You alone are the real joy giver And the apple of my eye You alone are my strength my shield To You alone may my spirit yield You alone are my heart's desire And I long to worship Thee You're my friend and you are my brother Even though you are a king I love you more than any other So much more than anything You alone are my strength my shield To You alone may my spirit yield You alone are my heart's desire And I long to worship Thee",
+      "sha": "d6d4fccecf89285430895ded3c11b71964985996"
+    },
     {
       "slug": "doa-kami",
       "title": "Doa Kami",
@@ -48,6 +60,18 @@
       "firstLine": "Being of one mind having the same love",
       "words": "Being of one mind having the same love Being of one accord having the same heart Believing in one God following one truth Believing in Jesus doing what He says to do We pray for each other serve one another Walk in unity and care for each other's needs Break bread together brothers and sisters Hand in hand in the body of Christ we become one Gm G Gm/E Gm/D D D2-D And we will do nothing for our own glo ry But in humility we will treat others Bb/D Csus-C KEY CHANGE As more important than ourselves A/C# - B/D# We pray for each other serve one another Walk in unity and care for each other's needs Break bread together brothers and sisters Hand in hand in the body of Christ we become one A B2 C2 D2 E – E2 B/C#- C#m A2 B2-B Hand in hand in the body of Christ we become one",
       "sha": "70afaea77ea71f85b79ea5c2e1496c881ed66a5e"
+    },
+    {
+      "slug": "open-the-eyes-of-my-heart",
+      "title": "Open The Eyes Of My Heart",
+      "author": "Michael W. Smith",
+      "key": "E",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "Open The Eyes Of My Heart, Lord",
+      "words": "Open The Eyes Of My Heart, Lord Open The Eyes Of My Heart I Want To See You, I Want To See You Open The Eyes Of My Heart, Lord Open The Eyes Of My Heart I Want To See You, I Want To See You To See You High And Lifted Up Shining In The Light Of Your Glory Pour Out Your Power And Love As We Sing Holy, Holy, Holy Holy, Holy, Holy Holy, Holy, Holy Holy, Holy, Holy I Want To See You",
+      "sha": "fd000a24bc22b849274616fa64efe839ca0a4bba"
     },
     {
       "slug": "search-me-o-god",
