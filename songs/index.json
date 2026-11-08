@@ -1,6 +1,18 @@
 {
-  "count": 8,
+  "count": 13,
   "songs": [
+    {
+      "slug": "doa-kami",
+      "title": "Doa Kami",
+      "author": "True Worshippers",
+      "key": "G",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "Syukur Untuk Setiap Rencana-Mu",
+      "words": "Syukur Untuk Setiap Rencana-Mu Dan Rancangan-Mu Yang Mulia Dalam Satu Tubuh Kami Bersatu Menjadi Duta Kerajaan-Mu Kuucapkan Berkat Atas Indonesia Biar Kemuliaan Tuhan Akan Nyata Bagi Bangsa Ini Kami Berdiri Dan Membawa Doa Kami Kepada-Mu Sesuatu Yang Besar Pasti Terjadi Dan Mengubahkan Negeri Kami Hanya Nama-Mu Tuhan Ditinggikan Atas Seluruh Bumi Kami Tahu Hati-Mu Ada Di Bangsa Ini",
+      "sha": "af07b22bb0864b418fe89662b0d90ee0ef63b281"
+    },
     {
       "slug": "go-out-in-peace",
       "title": "Go Out in Peace",
@@ -17,6 +29,30 @@
       "sha": "13f5bfa28aa3f4950893ec98489fb70452ff2e4b"
     },
     {
+      "slug": "hari-ini-kurasa-bahagia",
+      "title": "Hari Ini Kurasa Bahagia",
+      "author": "",
+      "key": "D",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "Ha - ri Ini",
+      "words": "Ha - ri Ini Kurasa Bahagia Berkum - pul Bersama Saudara Seiman Tu - han Yesus T'lah Satukan Kita Tanpa Memandang Di Antara Kita Bergandengan Tangan Dalam Kasih Dalam Satu Hati Berja - lan Dalam Terang Kasih Tuhan Kau Sahabatku Kau Saudaraku Tiada Yang Dapat Memisahkan Kita Kau Sahabatku Kau Saudaraku Tiada Yang Dapat Memisahkan Kita",
+      "sha": "c5217ec73b77a163666d643f434331e865efc2a1"
+    },
+    {
+      "slug": "little-by-little",
+      "title": "Little by little",
+      "author": "",
+      "key": "G",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "Little By Little Everyday,",
+      "words": "Little By Little Everyday, Little By Little Everyday Jesus Is Changing Me Since I Made A Turn-About-Face I’Ve Been Growing In His Grace Jesus Is Changing Me He’S Changing Me, My Blessed Savior I’m Not The Same Person That I Used To Be Though I’Ve Been Slow Growing But There’s A Knowing That Someday Perfect I Will Be",
+      "sha": "725a6db30049d149fdf88ad9eb11fb46049767f8"
+    },
+    {
       "slug": "morning-lantern",
       "title": "Morning Lantern",
       "author": "Demo Writer",
@@ -30,6 +66,18 @@
       "firstLine": "Wake, my soul, the dawn is breaking,",
       "words": "Wake, my soul, the dawn is breaking, light is spilling through the door; every shadow now is fading, You are faithful evermore. Like a lantern in the morning, You go on ahead of me; every step and every turning lit by grace I cannot see. Sing aloud, the day has come, all the earth, a joyful song; from the morning till it's done, we will praise You all day long.",
       "sha": "61a32da011682bf77a50d2a2d25d1c3e7a825ed1"
+    },
+    {
+      "slug": "one",
+      "title": "One",
+      "author": "Jeff Slaughter",
+      "key": "D",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "Being of one mind having the same love",
+      "words": "Being of one mind having the same love Being of one accord having the same heart Believing in one God following one truth Believing in Jesus doing what He says to do We pray for each other serve one another Walk in unity and care for each other's needs Break bread together brothers and sisters Hand in hand in the body of Christ we become one Gm G Gm/E Gm/D D D2-D And we will do nothing for our own glo ry But in humility we will treat others Bb/D Csus-C KEY CHANGE As more important than ourselves A/C# - B/D# We pray for each other serve one another Walk in unity and care for each other's needs Break bread together brothers and sisters Hand in hand in the body of Christ we become one A B2 C2 D2 E – E2 B/C#- C#m A2 B2-B Hand in hand in the body of Christ we become one",
+      "sha": "70afaea77ea71f85b79ea5c2e1496c881ed66a5e"
     },
     {
       "slug": "quiet-harbor",
@@ -60,6 +108,18 @@
       "firstLine": "There's a river running deep,",
       "words": "There's a river running deep, wide enough for all who seek; cool and clear it calls my name, I will never be the same. River of mercy, carry me home, over the valley and over the stone; river of mercy, flowing so free, wash every worry away from me. When the summer fields are dry, when the dust is in my eyes, I will kneel beside the stream, You restore the soul in me.",
       "sha": "aee0c30f49031599ad03c08d1250812ebf1a32e4"
+    },
+    {
+      "slug": "search-me-o-god",
+      "title": "Search Me O God",
+      "author": "J. Edwin Orr",
+      "key": "G",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "Search me, O God, and know my heart today;",
+      "words": "Search me, O God, and know my heart today; Try me, O Saviour, Know my thoughts, I pray. See if there be some wicked way in me; Cleanse me from every sin and set me free. I praise Thee, Lord, for cleansing me from sin; Fulfill Thy Word, and make me pure within. Fill me with fire where once I burned with shame; Grant my desire to magnify Thy Name. Lord, take my life, and make it wholly Thine; Fill my poor heart with Thy great love divine. Take all my will, my passion, self and pride; I now surrender, Lord In me abide. O Holy Ghost, revival comes from Thee; Send a revival, start the work in me. Thy Word declares Thou wilt supply our need; For blessings now, O Lord, I humbly plead.",
+      "sha": "52813847beef638178549c849142917a32d59e84"
     },
     {
       "slug": "sing-o-hills",
