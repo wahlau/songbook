@@ -1,6 +1,18 @@
 {
-  "count": 7,
+  "count": 12,
   "songs": [
+    {
+      "slug": "amazing-grace-my-chains-are-gone",
+      "title": "Amazing Grace (My Chains Are Gone)",
+      "author": "",
+      "key": "D",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "Amazing Grace, how",
+      "words": "Amazing Grace, how sweet the sound That saved a wretch like me I once was lost but now am found Was blind but now I see 'Twas Grace that taught my heart to fear And Grace my fears re - lieved How precious did that Grace appear The hour I first be lieved My chains are gone, I've been set free My God, my Savior has ransomed me And like a flood His mercy rains Unending love, Amazing Grace The Lord has promised good to me His word my hope secures He will my shield and portion be As long as life endures The earth shall soon dissolve like snow The sun forbear to shine But God who called me here below Will be forever mine Will be forever mine You are forever",
+      "sha": "166fca77d1e13a11f039dd1f2d0539735cface1a"
+    },
     {
       "slug": "as-the-deer",
       "title": "As the Deer",
@@ -12,6 +24,18 @@
       "firstLine": "As the deer panteth for the water",
       "words": "As the deer panteth for the water So my soul longeth after Thee You alone are my heart's desire And I long to worship Thee. You alone are my strength my shield To You alone may my spirit yield You alone are my heart's desire And I long to worship Thee I love you more than gold or silver Only You can satisfy You alone are the real joy giver And the apple of my eye You alone are my strength my shield To You alone may my spirit yield You alone are my heart's desire And I long to worship Thee You're my friend and you are my brother Even though you are a king I love you more than any other So much more than anything You alone are my strength my shield To You alone may my spirit yield You alone are my heart's desire And I long to worship Thee",
       "sha": "d6d4fccecf89285430895ded3c11b71964985996"
+    },
+    {
+      "slug": "come-now-is-the-time-to-worship",
+      "title": "Come, Now Is The Time To Worship",
+      "author": "",
+      "key": "D",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "Come, now is the time to wor - ship",
+      "words": "Come, now is the time to wor - ship Come, now is the time to give your heart Come, just as you are to wor - ship Come, just as you are before your God Come One day every tongue Will confess You are God One day every knee Will bow Still the greatest treasure Remains for those Who gladly choose You now",
+      "sha": "675454992d12be11814f7a8ccff13f67b88c2022"
     },
     {
       "slug": "doa-kami",
@@ -26,6 +50,30 @@
       "sha": "af07b22bb0864b418fe89662b0d90ee0ef63b281"
     },
     {
+      "slug": "great-is-the-lord",
+      "title": "Great Is The Lord",
+      "author": "",
+      "key": "A",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "Great is the Lord and most worthy of praise",
+      "words": "Great is the Lord and most worthy of praise D E F♯m E/G♯ The city of our God, the holy place A Bm7 – Esus|D The joy of the whole earth Great is the Lord in whom we have the victory D E F♯m E/G♯ He aids us against the enemy We bow down on our knees A C♯m7 And Lord we want to lift Your name on high And Lord, we want to thank You Bm7 Esus|D For the works You've done in our lives A C♯m7 And Lord, we trust in Your unfailing love For You alone are God eternal Throughout earth and heaven above",
+      "sha": "8e9a54972d9bdcf07a0d29cba7dd32a8831a45c0"
+    },
+    {
+      "slug": "great-is-thy-faithfulness",
+      "title": "GREAT IS THY FAITHFULNESS",
+      "author": "",
+      "key": "C",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "Great is thy faithfulness, O God my Father,",
+      "words": "Great is thy faithfulness, O God my Father, There is no shadow of turning with Thee; Thou changest not, Thy compassions they fail not As Thou has been Thou forever wilt be. Great is Thy faithfulness, Great is Thy faithfulness, Morning by morning new mercies I see. All I have needed Thy hand hath provided Great is Thy faithfulness, Lord unto me. Pardon for sin and a peace that endureth, Thy own dear presence to cheer and to guide. Strength for today and bright hope for tomorrow",
+      "sha": "172f0b18482a37cd25055da07a3f89f7021d14e1"
+    },
+    {
       "slug": "hari-ini-kurasa-bahagia",
       "title": "Hari Ini Kurasa Bahagia",
       "author": "",
@@ -36,6 +84,18 @@
       "firstLine": "Ha - ri Ini",
       "words": "Ha - ri Ini Kurasa Bahagia Berkum - pul Bersama Saudara Seiman Tu - han Yesus T'lah Satukan Kita Tanpa Memandang Di Antara Kita Bergandengan Tangan Dalam Kasih Dalam Satu Hati Berja - lan Dalam Terang Kasih Tuhan Kau Sahabatku Kau Saudaraku Tiada Yang Dapat Memisahkan Kita Kau Sahabatku Kau Saudaraku Tiada Yang Dapat Memisahkan Kita",
       "sha": "c5217ec73b77a163666d643f434331e865efc2a1"
+    },
+    {
+      "slug": "i-surrender-all",
+      "title": "I Surrender All",
+      "author": "Hymn",
+      "key": "G",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "Verse1",
+      "words": "Verse1 All to Jesus I surrender All to Him I freely give I will ever love and trust him In His presence daily live I surrender all, I surrender all All to thee, my blessed Savior I surrender all Verse2 All to Jesus I surrender Humbly at His feet I bow Worldly pleasures all forsaken Take me, Jesus, take me now Verse3 All to Jesus I surrender Make me, Savior, wholly Thine Let me feel Thy Holy Spirit Truly know that Thou art mine Verse4 All to Jesus I surrender Lord, I give myself to Thee Fill me with Thy love and power Let Thy blessing fall on me Verse5 All to Jesus I surrender Now I feel the sacred flame Oh, the joy of full salvation Glory, glory to His name",
+      "sha": "5e2fe3e4e3ce7b6975b6c7537bfe7428fccd3319"
     },
     {
       "slug": "little-by-little",
