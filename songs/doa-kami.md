@@ -9,7 +9,7 @@ key: G
 [G]Dalam Satu [D/F#]Tubuh Kami [Em]Bersatu  [D]
 [C]Menjadi Duta [A/C#]Kerajaan-[D]Mu
 
-Ku[C]ucapkan Ber[D/C]kat A[Bm]tas Indonesi[Em]a
+Ku[C]ucapkan Ber[D/C]kat A[Bm]tas Malaysi[Em]a
 Bi[Am]ar Kemulia[G/B]an Tuhan A[C]kan Nya[D]ta
 
 # Chorus
