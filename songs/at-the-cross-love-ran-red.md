@@ -38,7 +38,16 @@ And [G/B]forgive-[C2]ness
 Where all the [D(add4)]love I've ever [C2]found
 Comes like a [D(add4)]flood, comes flowing [C2]down
 
-REPEAT CHORUS
+# Chorus
+At the [C2]cross, at the cross
+I sur -[G]ren - der my life
+I'm in [D]awe of You
+I'm in [Am7]awe of You
+
+Where Your [C2]love ran red
+And my [G]sin washed white
+I owe [D]all to You
+I owe [Am7]all to You, Je -[C2]sus
 
 # Bridge
 [C2]Here my hope is found
