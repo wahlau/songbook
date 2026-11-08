@@ -57,7 +57,7 @@ Shall not [A]kneel, shall not [D]faint
 By His blood and in His [G]name
 In His [A]freedom I am [D]free
 For the love of Jesus [G]Christ
-Who has [A]resurrected  (A major) [D]me, oh
+Who has [A]resurrected [D]me, oh
 
 # Chorus 3
 [D]Praise the Father, [G]praise the Son
