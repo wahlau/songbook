@@ -368,9 +368,9 @@
     bind();
     renderSet();
 
-    const live = new URLSearchParams(location.search).get('source') === 'live';
+    const sourceParam = new URLSearchParams(location.search).get('source') || '';
     try {
-      const { songs, source, skipped } = await S.listSongs({ live });
+      const { songs, source, skipped } = await S.listSongs({ source: sourceParam });
       state.songs = songs;
       state.bySlug = new Map(songs.map(s => [s.slug, s]));
       el.status.hidden = true;

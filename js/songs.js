@@ -275,9 +275,10 @@
     const res = await fetch(url, { headers: { Accept: 'application/vnd.github+json' } });
     if (!res.ok) return null;
     const files = await res.json();
-    const names = files.filter(f => f.type === 'file').map(f => f.name);
-    noteSkipped(names);
-    return names.filter(isSongFile).map(toSlug);
+    if (!Array.isArray(files)) return null;
+    const list = files.filter(f => f.type === 'file');
+    noteSkipped(list.map(f => f.name));
+    return list.filter(f => isSongFile(f.name)).map(f => ({ slug: toSlug(f.name), sha: f.sha }));
   }
 
   async function listFromDirectory() {
@@ -297,11 +298,36 @@
     return out.filter(Boolean);
   }
 
-  /**
-   * Find every song in the songs/ folder.
-   * Order: songs/index.json → GitHub folder listing → web-server folder listing.
-   * With { live: true } the folder is read directly first (skipping index.json).
+  /*
+   * Live list from the GitHub repo. index.json is only used as a cache:
+   * a song's stored details are reused when its file version (sha) is unchanged;
+   * new or edited songs are read fresh. Songs deleted from the folder disappear.
    */
+  async function liveFromGitHub() {
+    const files = await listFromGitHub();
+    if (!files || !files.length) return null;
+    let cached = [];
+    try { cached = (await listFromIndex()) || []; } catch (e) { cached = []; }
+    const bySlug = new Map(cached.map(x => [x.slug, x]));
+    const songs = await Promise.all(files.map(async f => {
+      const known = bySlug.get(f.slug);
+      if (known && known.sha && known.sha === f.sha) return known;
+      try {
+        const fresh = summarize(await loadSong(f.slug));
+        fresh.sha = f.sha;
+        return fresh;
+      } catch (e) {
+        return known || null; // e.g. just committed and GitHub Pages hasn't published it yet
+      }
+    }));
+    return songs.filter(Boolean);
+  }
+
+  async function liveFromDirectory() {
+    const slugs = await listFromDirectory();
+    return slugs && slugs.length ? summariesFor(slugs) : null;
+  }
+
   function isLocalAddress() {
     if (typeof location === 'undefined') return false;
     const h = location.hostname;
@@ -309,21 +335,28 @@
       /^172\.(1[6-9]|2\d|3[01])\./.test(h) || /\.local$/.test(h) || h === '[::1]';
   }
 
+  /**
+   * Find every song in the songs/ folder.
+   *  - On GitHub Pages: read the repo's songs/ folder live (GitHub API), using index.json as a cache.
+   *  - On your own computer: read the folder listing from the local web server.
+   *  - Fallback: songs/index.json on its own (e.g. GitHub API limit reached, custom domain).
+   * options.source = 'index' forces index.json; 'live' prefers a live listing.
+   */
   async function listSongs(options) {
-    // On your own computer, always read the folder directly so new files show up without rebuilding index.json.
-    const live = !!(options && options.live) || isLocalAddress();
-    const strategies = [
-      { name: 'songs/index.json', run: listFromIndex, summaries: true },
-      { name: 'GitHub folder', run: listFromGitHub },
-      { name: 'folder listing', run: listFromDirectory }
-    ];
-    if (live) strategies.push(strategies.shift());
-    for (const s of strategies) {
-      let found = null;
-      try { found = await s.run(); } catch (e) { found = null; }
-      if (!found || !found.length) continue;
-      const songs = s.summaries ? found : await summariesFor(found);
-      if (songs.length) return { songs: sortSongs(songs), source: s.name, skipped: [...skipped].sort() };
+    const want = (options && options.source) || '';
+    const S_GH = { name: 'GitHub folder (live)', run: liveFromGitHub };
+    const S_DIR = { name: 'folder listing (live)', run: liveFromDirectory };
+    const S_IDX = { name: 'songs/index.json', run: listFromIndex };
+    let order;
+    if (want === 'index') order = [S_IDX, S_GH, S_DIR];
+    else if (isLocalAddress()) order = [S_DIR, S_IDX];
+    else if (githubRepo()) order = [S_GH, S_IDX, S_DIR];
+    else order = want === 'live' ? [S_DIR, S_IDX] : [S_IDX, S_DIR];
+
+    for (const s of order) {
+      let songs = null;
+      try { songs = await s.run(); } catch (e) { songs = null; }
+      if (songs && songs.length) return { songs: sortSongs(songs), source: s.name, skipped: [...skipped].sort() };
     }
     throw new Error('No songs were found in the songs/ folder.');
   }

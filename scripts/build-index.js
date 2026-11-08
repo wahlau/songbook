@@ -8,6 +8,7 @@
 'use strict';
 
 const fs = require('fs');
+const crypto = require('crypto');
 const path = require('path');
 const SongLib = require('../js/songs.js');
 
@@ -19,12 +20,16 @@ const files = all.filter(SongLib.isSongFile).sort();
 bad.forEach(f => console.warn(`! Skipped "${f}": file names may only use letters, numbers, - and _ (no spaces).`));
 
 const songs = SongLib.sortSongs(files.map(f => {
-  const text = fs.readFileSync(path.join(dir, f), 'utf8');
+  const buf = fs.readFileSync(path.join(dir, f));
+  const text = buf.toString('utf8');
   const song = SongLib.parseSong(text, SongLib.toSlug(f));
   if (!/^---\s*\n[\s\S]*?\btitle\s*:/i.test(text.replace(/\r/g, ''))) {
     console.warn(`! "${f}" has no title — using the file name.`);
   }
-  return SongLib.summarize(song);
+  const summary = SongLib.summarize(song);
+  // Same id GitHub gives each file version, so the site can tell which songs changed.
+  summary.sha = crypto.createHash('sha1').update(`blob ${buf.length}\0`).update(buf).digest('hex');
+  return summary;
 }));
 
 const out = path.join(dir, 'index.json');
