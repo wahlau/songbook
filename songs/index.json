@@ -1,6 +1,18 @@
 {
-  "count": 12,
+  "count": 22,
   "songs": [
+    {
+      "slug": "alabaster-jar",
+      "title": "Alabaster Jar",
+      "author": "Gateway Worship",
+      "key": "G",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "This alabaster jar",
+      "words": "This alabaster jar is all I have of worth I break it at Your feet, Lord It's less than You deserve You're far more beautiful More precious than the oil The sum of my desires and the fullness of my joy! Like You spilled Your blood, I spill my heart as an offering to my King Here I am, take me As an offering Here I am, giving every heartbeat For Your glory take me The time that I have left Page 1/2 is all I have of worth I lay it at Your feet, Lord It's less than You deserve And though I've little strength And though my days are few, You gave Your life for me So, I will live my life for You Worthy, Worthy You are worthy Worthy is the Lord (repeat as desired)",
+      "sha": "3acc49f615ed4dce3e6f2cee978975ac14d25d03"
+    },
     {
       "slug": "amazing-grace-my-chains-are-gone",
       "title": "Amazing Grace (My Chains Are Gone)",
@@ -14,6 +26,18 @@
       "sha": "0288c620c3ef0db8cd4ce6f6342cc158c9da56a2"
     },
     {
+      "slug": "ancient-of-days",
+      "title": "Ancient Of Days",
+      "author": "CityAlight",
+      "key": "C",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "Though the na - tions rage,",
+      "words": "Though the na - tions rage, kingdoms rise and fall There is still one King reigning ov - er all So I will not fear for this truth re - mains: That my God is, the Ancient of Days None above Him, none before Him All of time in His hands For His throne it shall remain and ever stand All the power, all the glory I will trust in His name For my God is, the Ancient of Days Though the dread of night overwhelms my soul He is here with me, I am not a - lone O His love is sure, and He knows my name For my God is, the Ancient of Days None above Him, none before Him All of time in His hands For His throne it shall remain and ever stand All the power, all the glory I will trust in His name For my God is, the Ancient of Days Though I may not see what the future brings I will watch and wait for the Sa - vior King Then my joy com - plete standing face to face In the presence of the Ancient of Days None above Him, none before Him All of time in His hands For His throne it shall remain and ever stand All the power, all the glory I will trust in His name For my God is, the Ancient of Days For my God is, the Ancient of Days",
+      "sha": "9753636334a483a19da73f0ee5904aa20c41f4ec"
+    },
+    {
       "slug": "as-the-deer",
       "title": "As the Deer",
       "author": "Martin J. Nystrom",
@@ -24,6 +48,30 @@
       "firstLine": "As the deer panteth for the water",
       "words": "As the deer panteth for the water So my soul longeth after Thee You alone are my heart's desire And I long to worship Thee. You alone are my strength my shield To You alone may my spirit yield You alone are my heart's desire And I long to worship Thee I love you more than gold or silver Only You can satisfy You alone are the real joy giver And the apple of my eye You alone are my strength my shield To You alone may my spirit yield You alone are my heart's desire And I long to worship Thee You're my friend and you are my brother Even though you are a king I love you more than any other So much more than anything You alone are my strength my shield To You alone may my spirit yield You alone are my heart's desire And I long to worship Thee",
       "sha": "d6d4fccecf89285430895ded3c11b71964985996"
+    },
+    {
+      "slug": "at-the-cross-love-ran-red",
+      "title": "At the Cross (Love Ran Red)",
+      "author": "",
+      "key": "Em",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "/ / | / / | / / / | / / / |",
+      "words": "/ / | / / | / / / | / / / | / / | / / | / / / | / / / | There's a place where mer - cy reigns And nev - er dies There's a place where streams of grace Flow deep and wide Where all D(add4) the love I've ever found Comes like a D(add4) flood, comes flow - ing down At the cross, at the cross I sur - ren - der my life I'm in awe of You I'm in awe of You Where Your love ran red And my sin washed white I owe all to You I owe all to You, Je - sus There's a place where sin and shame Are power- less Where my heart has peace with God And forgive- ness Where all the D(add4) love I've ever found Comes like a D(add4) flood, comes flowing down REPEAT CHORUS Here my hope is found Here on holy ground Here I bow down Here I bow down Here arms open wide Here You saved my life Here I bow down",
+      "sha": "d6029198d6d21e0eb6337492f2f8c58c92e8ab50"
+    },
+    {
+      "slug": "blessings-everywhere",
+      "title": "Blessings Everywhere",
+      "author": "Elevation Worship feat. Brandon Lake",
+      "key": "B",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "O my soul",
+      "words": "O my soul O bless the Lord...... O my soul O bless the Lord..... Don’t you forget His benefits Don’t you remember how good he is? Blessings in the day Blessings in the night Blessings everywhere I go Blessings up ahead Blessings back behind Blessings everywhere I go O my soul O bless the Lord.... O my soul O bless the Lord.... Don’t you forget His benefits Don’t you remember how good he is? Blessings in the day Blessings in the night' Blessings everywhere I go Blessings up ahead Blessings back behind Blessings everywhere I go Blessings in the highs Blessings in the lows Blessings everywhere I go Blessings in the yes Blessings in the no Blessings everywhere I go Come now Sunrise Open My eyes Come now Sunrise Open My eyes Come now Sunrise Open My eyes Come now Sunrise Open My eyes (to the) Blessings in the day Blessings in the night' Blessings everywhere I go Blessings up ahead Blessings back behind Blessings everywhere I go Blessings in the highs Blessings in the lows Blessings everywhere I go Blessings in the yes Blessings in the no Blessings everywhere I go",
+      "sha": "3b36f3274a0e28322692365fe746d3d437dd3b5e"
     },
     {
       "slug": "come-now-is-the-time-to-worship",
@@ -48,6 +96,30 @@
       "firstLine": "Syukur Untuk Setiap Rencana-Mu",
       "words": "Syukur Untuk Setiap Rencana-Mu Dan Rancangan-Mu Yang Mulia Dalam Satu Tubuh Kami Bersatu Menjadi Duta Kerajaan-Mu Kuucapkan Berkat Atas Indonesia Biar Kemuliaan Tuhan Akan Nyata Bagi Bangsa Ini Kami Berdiri Dan Membawa Doa Kami Kepada-Mu Sesuatu Yang Besar Pasti Terjadi Dan Mengubahkan Negeri Kami Hanya Nama-Mu Tuhan Ditinggikan Atas Seluruh Bumi Kami Tahu Hati-Mu Ada Di Bangsa Ini",
       "sha": "af07b22bb0864b418fe89662b0d90ee0ef63b281"
+    },
+    {
+      "slug": "gratitude",
+      "title": "Gratitude",
+      "author": "",
+      "key": "B",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "| | | | |",
+      "words": "| | | | | | | | | | All my wo rds fall short I got n othing new How could I express All my grat itude I could s ing these songs As I o ften do But every song must end And You never do So I thr ow up my hands And praise You again and a gain ‘Cause all that I have is a hall elujah, hal - le - lujah And I k now it’s not much But I’ve nothing else fit for a king Except for a heart singing hal lelujah Hal - le - l u - j ah I’ve got one response I’ve got just one move With my arms stretched wide I will worship You REPEAT CHORUS Channel | | | | | | | | | | Come on my soul Oh don’t you get shy on me Lift up your song ‘Cause you’ve got a lion inside of those lungs Get up and praise the Lord Come on my soul Oh don’t you get shy on me Lift up your song Cause you’ve got a lion in side of those lungs Get up and praise the Lord Come on my soul Oh don’t you get shy on me Lift up your song Cause you’ve got a lion in side of those lungs Get up and praise the Lord Channel 2 | | | | | (X5) | | | | | Alt Chorus So I thr ow up my hands And praise You again and a gain ‘Cause all that I have is a hall elujah, hallelujah And I k now it’s not much But I’ve nothing else fit for a king Except for a heart singing hal lelujah Halleluj",
+      "sha": "865d1a7e1e10078377005023b21e516a2af58e10"
+    },
+    {
+      "slug": "great-are-you-lord",
+      "title": "Great Are You Lord",
+      "author": "",
+      "key": "E",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "D F♯m E (repeat)",
+      "words": "D F♯m E (repeat) D F♯m You give life, You are love You bring light to the darkness D F♯m You give hope, You restore Every heart that is broken D F♯m E Great are You, Lord D F♯m It's Your breath in our lungs So we pour out our praise, we pour out our praise D F♯m It's Your breath in our lungs So we pour out our praise to You only All the earth will shout Your praise Our hearts will cry, these bones will sing Great are You, Lord D F♯m E",
+      "sha": "7369c260fa0a5c7b23f1140c016faf40be164338"
     },
     {
       "slug": "great-is-the-lord",
@@ -98,6 +170,30 @@
       "sha": "5e2fe3e4e3ce7b6975b6c7537bfe7428fccd3319"
     },
     {
+      "slug": "kami-perlu-kau-tuhan",
+      "title": "Kami Perlu Kau Tuhan",
+      "author": "",
+      "key": "G",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "Chord Kami Perlu Kau Tuhan (Nikita)",
+      "words": "Chord Kami Perlu Kau Tuhan (Nikita) Ke Manakah Kami Mencari Kasih Seja - ti Ke Manakah Kami Berseru Saat Badai Datang Menderu Yang Kami Tahu Hanya Kau Yang Mampu Pulihkan S’gala Sesuatu Ke Manakah Kami Mencari Kasih Seja - ti Ke Manakah Kami Berseru Saat Badai Datang Menderu Yang Kami Tahu Hanya Kau Yang Mampu Pulihkan S’gala Sesuatu Kami Perlukan KeajaibanMu Kami Butuhkan Sentuhan TanganMu Kami Tak Dapat Berjalan Sendiri Kami Perlu Kau Tuhan",
+      "sha": "968da463ddba5a27b79c5b68cfdc335d8c7318bc"
+    },
+    {
+      "slug": "king-of-kings",
+      "title": "King of Kings",
+      "author": "Hillsong Worship",
+      "key": "D",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "Skip chords and lyrics",
+      "words": "Skip chords and lyrics (D major) (D major) (D major) (D major) In the darkness, (D major) we were waiting (G major) Without hope, (A major) without light (D major) 'Til from Heaven You came running (G major) There was mercy (A major) in Your eyes (D major) To fulfill the law and prophets (G major) To a virgin (A major) came the Word (D major) From a throne of endless glory (G major) To a cradle (A major) in the dirt (D major) New- Play with audio & scroll Upgrade to play 20,000+ songs ads free, and enjoy playing with music. Get now (D major) Praise the Father, (G major) praise the Son (B minor) Praise the Spirit, (A major) three in one (D major) God of glory, (G major) Majesty (B minor) Praise for (G major) ever to the (A major) King of (D major) Kings To reveal (D major) the kingdom coming (G major) And to reconcile (A major) the lost (D major) To redeem the whole creation (G major) You did not (A major) despise the cross (D major) For even in Your suffering (G major) You saw to (A major) the other side (D major) Knowing this was our salvation (G major) Jesus for (A major) our sake You died (D major) (D major) Praise the Father, (G major) praise the Son (B minor) Praise the Spirit, (A major) three in one (D major) God of glory, (G major) Majesty (B minor) Praise fo (G major) rever to the (A major) King of (D major) Kings And the morning (B minor) that You rose (G major) All of Heaven (A major) held its breath (D major) 'Til that stone (B minor) was moved for good (G major) For the Lamb (A major) had conquered death (D major) And the dead (B minor) rose from their tombs (G major) And the angels (A major) stood in awe (D major) For the souls (B minor) of all who'd come (G major) To the Father (A major) are restored (D major) And the church of Christ was born (G major) Then the Spirit (A major) lit the flame (D major) Now this gospel truth of old (G major) Shall not kneel, (A major) shall not faint (D major) By His blood and in His name (G major) In His freedom (A major) I am free (D major) For the love of Jesus Christ (G major) Who has resurrected (A major) me, (D major) oh (D major) Praise the Father, (G major) praise the Son (B minor) Praise the Spirit, (A major) three in one (D major) God of glory, (G major) Majesty (B minor) Praise fo (G major) rever to the (A major) King of (D major) Kings Praise fo (G major) rever to the (A major) King of (D major) Kings 2019Pop Hide sidebar Download Chords Save this song as a PDF to play offline Download PDF GuitarPianoUkulele 0 Tuning: E A D G B EKey: D majorBPM: 68",
+      "sha": "7c13b45deada363a814193f29dcde8a9f3a6ff29"
+    },
+    {
       "slug": "little-by-little",
       "title": "Little by little",
       "author": "",
@@ -108,6 +204,18 @@
       "firstLine": "Little By Little Everyday,",
       "words": "Little By Little Everyday, Little By Little Everyday Jesus Is Changing Me Since I Made A Turn-About-Face I’Ve Been Growing In His Grace Jesus Is Changing Me He’S Changing Me, My Blessed Savior I’m Not The Same Person That I Used To Be Though I’Ve Been Slow Growing But There’s A Knowing That Someday Perfect I Will Be",
       "sha": "725a6db30049d149fdf88ad9eb11fb46049767f8"
+    },
+    {
+      "slug": "lord-i-need-you",
+      "title": "Lord I Need You",
+      "author": "",
+      "key": "G",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "/ / / | / / /",
+      "words": "/ / / | / / / Lord, I come, I con -fess Bowing here I find my rest Without You I fall apart You're the One that guides my heart Lord, I need You, Oh, I need You Every hour I need You My one defense, my righteousness Oh God, how I need You Where sin runs deep Your grace is more Where grace is found is where You are And where You are, Lord, I am free Holiness is Christ in me Teach my song to rise to You When temptation comes my way And when I cannot stand I'll fall on You Jesus, You're my hope and stay",
+      "sha": "6d6d4ea1d68295f112e2b53645fe7f56bc61bb97"
     },
     {
       "slug": "one",
@@ -144,6 +252,18 @@
       "firstLine": "Search me, O God, and know my heart today;",
       "words": "Search me, O God, and know my heart today; Try me, O Saviour, Know my thoughts, I pray. See if there be some wicked way in me; Cleanse me from every sin and set me free. I praise Thee, Lord, for cleansing me from sin; Fulfill Thy Word, and make me pure within. Fill me with fire where once I burned with shame; Grant my desire to magnify Thy Name. Lord, take my life, and make it wholly Thine; Fill my poor heart with Thy great love divine. Take all my will, my passion, self and pride; I now surrender, Lord In me abide. O Holy Ghost, revival comes from Thee; Send a revival, start the work in me. Thy Word declares Thou wilt supply our need; For blessings now, O Lord, I humbly plead.",
       "sha": "52813847beef638178549c849142917a32d59e84"
+    },
+    {
+      "slug": "worthy-of-it-all",
+      "title": "Worthy Of It All",
+      "author": "",
+      "key": "D",
+      "number": "",
+      "tags": [],
+      "hasChords": true,
+      "firstLine": "All the saints and angels",
+      "words": "All the saints and angels Bow before Your throne All the elders cast their crowns Before the Lamb of God and sing You are worthy of it all You are worthy of it all For from You are all things And to You are all things You deserve the glory A C♯m7 F♯m7 D Day and night, night and day C♯m7 Let incense arise F♯m7 Day and night, night and day Let incense arise Day and night, night and day Let incense arise Day and night, night and day Let incense arise",
+      "sha": "a0a5ece6f045b68fa8e531ec5d5cd6fd1610950f"
     }
   ]
 }
